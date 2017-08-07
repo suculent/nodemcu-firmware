@@ -102,7 +102,7 @@ SECTIONS
     *(.entry.text)
     *(.init.literal)
     *(.init)
-    
+
     /* SDK libraries that used in bootup process, interruption handling
      * and other ways where flash cache (iROM) is unavailable: */
     *libmain.a:*(.literal .literal.* .text .text.*)
@@ -110,7 +110,7 @@ SECTIONS
     *libphy.a:*(.literal .text)
     *libpp.a:*(.literal .text)
     *libgcc.a:*(.literal .text)
-    
+
     /* Following SDK libraries have .text sections, but not included in iRAM: */
     /* *libat.a:*(.literal .text) - not used anywhere in NodeMCU */
     /* *libcrypto.a:*(.literal .text) - tested that safe to keep in iROM */
@@ -125,7 +125,7 @@ SECTIONS
     *(.iram.text .iram0.text)
 
     *(.stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
-    
+    *(.ota.iram0.text .ota.iram0.data)
     *(.fini.literal)
     *(.fini)
     *(.gnu.version)
@@ -253,3 +253,6 @@ SECTIONS
 
 /* get ROM code address */
 INCLUDE "eagle.rom.addr.v6.ld"
+
+/* for OTA upgrade support, provide alternate name for real Cache_Read_Enable */
+PROVIDE(ROM_Cache_Read_Enable = 0x40004678);
