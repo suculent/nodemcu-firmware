@@ -46,7 +46,7 @@ end
 -- @name display
 -- @description A generic IMAP response processing function. 
 -- Can disply the IMAP response if DEBUG is set to true.
--- Sets the reponse processed variable to true when the string "complete"
+-- Sets the response processed variable to true when the string "complete"
 -- is found in the IMAP reply/response
 local function display(socket, response)
 

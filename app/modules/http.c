@@ -103,7 +103,7 @@ static void http_callback( char * response, int http_status, char ** full_respon
   }
 }
 
-// Lua: http.request( url, method, header, body, function(status, reponse) end )
+// Lua: http.request( url, method, header, body, function(status, response) end )
 static int http_lapi_request( lua_State *L )
 {
   int length;
@@ -137,7 +137,7 @@ static int http_lapi_request( lua_State *L )
   return 0;
 }
 
-// Lua: http.post( url, header, body, function(status, reponse) end )
+// Lua: http.post( url, header, body, function(status, response) end )
 static int http_lapi_post( lua_State *L )
 {
   int length;
@@ -171,7 +171,7 @@ static int http_lapi_post( lua_State *L )
   return 0;
 }
 
-// Lua: http.put( url, header, body, function(status, reponse) end )
+// Lua: http.put( url, header, body, function(status, response) end )
 static int http_lapi_put( lua_State *L )
 {
   int length;
@@ -205,7 +205,7 @@ static int http_lapi_put( lua_State *L )
   return 0;
 }
 
-// Lua: http.delete( url, header, body, function(status, reponse) end )
+// Lua: http.delete( url, header, body, function(status, response) end )
 static int http_lapi_delete( lua_State *L )
 {
   int length;
@@ -239,7 +239,7 @@ static int http_lapi_delete( lua_State *L )
   return 0;
 }
 
-// Lua: http.get( url, header, function(status, reponse) end )
+// Lua: http.get( url, header, function(status, response) end )
 static int http_lapi_get( lua_State *L )
 {
   int length;

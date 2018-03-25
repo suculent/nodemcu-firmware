@@ -24,7 +24,7 @@ typedef struct
     uint8_t ver;                /* CoAP version number */
     uint8_t t;                  /* CoAP Message Type */
     uint8_t tkl;                /* Token length: indicates length of the Token field */
-    uint8_t code;               /* CoAP status code. Can be request (0.xx), success reponse (2.xx), 
+    uint8_t code;               /* CoAP status code. Can be request (0.xx), success response (2.xx), 
                                  * client error response (4.xx), or rever error response (5.xx) 
                                  * For possible values, see http://tools.ietf.org/html/rfc7252#section-12.1 */
     uint8_t id[2];
