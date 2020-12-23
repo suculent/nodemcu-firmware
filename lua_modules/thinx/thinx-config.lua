@@ -19,8 +19,6 @@ THINX_API_PORT = 7442 -- use 7443 for https
 THINX_PROXY = "thinx.local"
 THINX_PLATFORM = "nodemcu"
 
-THINX_APP_VERSION = "1.0.0"
-
 -- end of machine-generated code
 
 -- BEGINNING OF USER FILE
